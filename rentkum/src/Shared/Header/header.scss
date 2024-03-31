@@ -1,0 +1,106 @@
+.header{
+
+    width: 300px;
+    height: 1024px;
+    padding: 30px 25px;
+    border: 1px solid #ccc;
+    background-color:#fff ;
+
+    .tittle{
+        
+        height: 55px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        margin: 0 0 45px 5px;
+
+        &-logo{
+            width: 50px ;
+
+        }
+        &-name{
+
+        }
+    }
+
+    .sidebar{
+
+        .line{
+            margin: 43px 12px;
+            border: 0.1px solid #e9eaed;
+        }
+        .half-bass{
+            color: #979797;
+            font-size: 16.2px;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+        
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+
+            &_item{
+                height: 48px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                text-decoration: none;
+                color: #979797;
+                font-size: 16.5px;  
+                line-height: 0;
+
+                &-icon{
+                    margin: 10px;
+                    width: 26.5px;
+                }
+            }
+        }
+
+        .shopping{
+            background-color: #f5f5f5;
+            width: 298px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            border-radius: 15px;
+            height: 245px;
+
+            &-card{
+                background-color: #dfe5f5;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &_icon{
+                    width: 30px;
+                }
+            }
+            &-text{
+                text-align: center;
+                font-size: 17px;
+
+            }
+            &-btn{
+                border: none;
+                background-color: #1053f3;
+                color: #fff;
+                width: 274px;
+                height: 50px;
+                padding: 11px 16px 11px 16px;
+                border-radius: 8px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+        }
+    }
+}
