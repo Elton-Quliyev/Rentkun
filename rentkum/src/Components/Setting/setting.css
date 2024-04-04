@@ -1,0 +1,46 @@
+.settings {
+  width: 370px;
+  height: 1090px;
+  padding: 30px 25px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+}
+.settings-list_item {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: #979797;
+  font-size: 16.5px;
+  line-height: 0;
+  border-radius: 8px;
+}
+.settings-list_item-little {
+  display: flex;
+  align-items: center;
+}
+.settings-list_item-icon {
+  margin: 10px;
+  width: 26.5px;
+  height: 24px;
+}
+.settings-list_item-right {
+  margin-right: 10px;
+  height: 15px;
+}
+.settings-list_item:hover {
+  background-color: #f5f5f5;
+  color: #1053f3;
+}
+.settings-list_item.active {
+  background-color: #f5f5f5;
+  color: #1053f3;
+}/*# sourceMappingURL=setting.css.map */

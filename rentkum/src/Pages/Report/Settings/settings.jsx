@@ -1,9 +1,17 @@
-import React from 'react'
+// Settings.js
+
+import React from 'react';
+import Setting from '../../../Components/Setting/setting';
 
 export default function Settings() {
   return (
-    <div>
-      Settings
+
+
+ 
+    <div className='settings-bar'>
+
+      <Setting/>
+
     </div>
-  )
+  );
 }

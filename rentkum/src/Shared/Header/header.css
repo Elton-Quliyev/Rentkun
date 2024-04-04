@@ -1,6 +1,6 @@
 .header {
   width: 300px;
-  height: 1024px;
+  height: 1090px;
   padding: 30px 25px;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -29,11 +29,11 @@
 .header .sidebar-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   padding: 0;
 }
 .header .sidebar-list_item {
-  height: 48px;
+  height: 55px;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -41,10 +41,20 @@
   color: #979797;
   font-size: 16.5px;
   line-height: 0;
+  border-radius: 8px;
 }
 .header .sidebar-list_item-icon {
   margin: 10px;
   width: 26.5px;
+  height: 24px;
+}
+.header .sidebar-list_item:hover {
+  background-color: #f5f5f5;
+  color: #1053f3;
+}
+.header .sidebar-list_item.active {
+  background-color: #f5f5f5;
+  color: #1053f3;
 }
 .header .sidebar .shopping {
   background-color: #f5f5f5;
@@ -56,6 +66,7 @@
   gap: 30px;
   border-radius: 15px;
   height: 245px;
+  margin: 25px 0;
 }
 .header .sidebar .shopping-card {
   background-color: #dfe5f5;
@@ -68,6 +79,11 @@
 }
 .header .sidebar .shopping-card_icon {
   width: 30px;
+  fill: blue;
+  transition: fill 0.3s;
+}
+.header .sidebar .shopping-card_icon:hover {
+  fill: red;
 }
 .header .sidebar .shopping-text {
   text-align: center;
