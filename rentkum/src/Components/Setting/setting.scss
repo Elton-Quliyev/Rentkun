@@ -1,66 +1,69 @@
 
+.rent-set{
+    display: flex;
 
-.settings{
-
-    width: 370px;
-    height: 1090px;
-    padding: 30px 25px;
-    border: 1px solid #ccc;
-    background-color:#fff ;
+    .settings{
     
-    
-    &-list{
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        padding: 0;
-
-        &_item{
-            height: 55px;
+        width: 370px;
+        height: 1090px;
+        padding: 30px 25px;
+        border: 1px solid #ccc;
+        background-color:#fff ;
+        
+        
+        &-list{
             display: flex;
-            justify-content: space-between;
-            gap: 5px;
-            align-items: center;
-            text-decoration: none;
-            color: #979797;
-            font-size: 16.5px;  
-            line-height: 0;
-            border-radius: 8px;
-
-            &-little{
+            flex-direction: column;
+            gap: 6px;
+            padding: 0;
+    
+            &_item{
+                height: 55px;
                 display: flex;
+                justify-content: space-between;
+                gap: 5px;
                 align-items: center;
+                text-decoration: none;
+                color: #979797;
+                font-size: 16.5px;  
+                line-height: 0;
+                border-radius: 8px;
+    
+                &-little{
+                    display: flex;
+                    align-items: center;
+                }
+    
+                &-icon{
+                    margin: 10px;
+                    width: 26.5px;
+                    height: 24px;
+                }
+    
+                &-right{
+                    margin-right: 10px;
+                    height: 15px;
+                }
             }
-
-            &-icon{
-                margin: 10px;
-                width: 26.5px;
-                height: 24px;
+            &_item:hover{
+                background-color: #f5f5f5;
+                color: #1053f3;
             }
-
-            &-right{
-                margin-right: 10px;
-                height: 15px;
+            &_item.active{
+                background-color: #f5f5f5;
+                color: #1053f3;
             }
-        }
-        &_item:hover{
-            background-color: #f5f5f5;
-            color: #1053f3;
-        }
-        &_item.active{
-            background-color: #f5f5f5;
-            color: #1053f3;
-        }
-        
-        
-        // &_item.active{
-        //     background-color: #f5f5f5;
-        //     color: #1053f3;
             
-        //     &-icon.active{
-        //     fill: red; 
             
-        //     }
-        // }
+            // &_item.active{
+            //     background-color: #f5f5f5;
+            //     color: #1053f3;
+                
+            //     &-icon.active{
+            //     fill: red; 
+                
+            //     }
+            // }
+        }
     }
 }

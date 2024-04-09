@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ChangeEmail() {
+export default function Notifications() {
   return (
     <div>
-      ChangeEmail
+      notifications
     </div>
   )
 }

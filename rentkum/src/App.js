@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes , Route, Navigate } from 'react-router-dom';
 import Header from './Shared/Header/header';
 import Discover from './Pages/AboutCar/Discover/discover';
 import Dashboard from './Pages/AboutCar/Dashboard/dashboard';
@@ -10,6 +10,13 @@ import Transactions from './Pages/Report/Transactions/transactions';
 import CarReports from './Pages/Report/CarReports/carReports';
 import Settings from './Pages/Report/Settings/settings';
 import LogOut from './Pages/Report/LogOut/logOut';
+import ProfileSettings from './Pages/Report/Settings/SettingBars/ProfileSettings/profileSettings';
+import PasswordChange from './Pages/Report/Settings/SettingBars/PasswordChange/passwordChange';
+import ChangeEmail from './Pages/Report/Settings/SettingBars/ChangeEmail/changeEmail';
+import Notifications from './Pages/Report/Settings/SettingBars/Notifications/notifications';
+import PaymentMethod from './Pages/Report/Settings/SettingBars/PaymentMethod/paymentMethod';
+import Security from './Pages/Report/Settings/SettingBars/Security/security';
+import Help from './Pages/Report/Settings/SettingBars/Help/help';
 
 function App() {
   return (
@@ -17,21 +24,28 @@ function App() {
       <Header/>
 
       <Routes>
-        <Route path='/' element={<Dashboard/>}/>
-        <Route path='/discover' element={<Discover/>}/>
-        <Route path='/calendar' element={<Calendar/>}/>
-        <Route path='/saved' element={<Saved/>}/>
-        <Route path='/inbox' element={<Inbox/>}/>
+          <Route path='/' element={<Dashboard/>}/>
+          <Route path='discover' element={<Discover/>}/>
+          <Route path='calendar' element={<Calendar/>}/>
+          <Route path='saved' element={<Saved/>}/>
+          <Route path='inbox' element={<Inbox/>}/>
+          <Route path='transactions' element={<Transactions/>}/>
+          <Route path='carReports' element={<CarReports/>}/>
+          <Route path='settings' element={<Settings/>}>
+            <Route index element={<Navigate to="profile" replace />} />
+            <Route path='profile'  element={<ProfileSettings />} />
+            <Route path='passwordChange' element={<PasswordChange />} />
+            <Route path='emailChange' element={<ChangeEmail />} />
+            <Route path='notifications' element={<Notifications />} />
+            <Route path='payment' element={<PaymentMethod />} />
+            <Route path='security' element={<Security />} />
+            <Route path='help' element={<Help />} />
+          </Route>
 
-        <Route path='/transactions' element={<Transactions/>}/>
-        <Route path='/carReports' element={<CarReports/>}/>
-
-        <Route path='/settings' element={<Settings/>}/>
-        <Route path='/logOut'  element={<LogOut/>}/>
-
+          <Route path='logOut'  element={<LogOut/>}/>
+        
       </Routes>
     </Router>
-    
   );
 }
 

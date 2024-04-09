@@ -1,17 +1,20 @@
-.settings {
+.rent-set {
+  display: flex;
+}
+.rent-set .settings {
   width: 370px;
   height: 1090px;
   padding: 30px 25px;
   border: 1px solid #ccc;
   background-color: #fff;
 }
-.settings-list {
+.rent-set .settings-list {
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 0;
 }
-.settings-list_item {
+.rent-set .settings-list_item {
   height: 55px;
   display: flex;
   justify-content: space-between;
@@ -23,24 +26,24 @@
   line-height: 0;
   border-radius: 8px;
 }
-.settings-list_item-little {
+.rent-set .settings-list_item-little {
   display: flex;
   align-items: center;
 }
-.settings-list_item-icon {
+.rent-set .settings-list_item-icon {
   margin: 10px;
   width: 26.5px;
   height: 24px;
 }
-.settings-list_item-right {
+.rent-set .settings-list_item-right {
   margin-right: 10px;
   height: 15px;
 }
-.settings-list_item:hover {
+.rent-set .settings-list_item:hover {
   background-color: #f5f5f5;
   color: #1053f3;
 }
-.settings-list_item.active {
+.rent-set .settings-list_item.active {
   background-color: #f5f5f5;
   color: #1053f3;
 }/*# sourceMappingURL=setting.css.map */
