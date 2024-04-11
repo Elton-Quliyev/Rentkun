@@ -4,13 +4,20 @@
 
     .settings{
     
-        width: 370px;
+        width: 340px;
         height: 1090px;
-        padding: 30px 25px;
+        padding: 30px 20px;
         border: 1px solid #ccc;
         background-color:#fff ;
         
         
+        &-tittle{
+            font-size: 25px; 
+            font-weight: 600; 
+            letter-spacing: 0.2px;
+            margin: 8px 0 50px 10px;
+        }
+
         &-list{
             display: flex;
             flex-direction: column;

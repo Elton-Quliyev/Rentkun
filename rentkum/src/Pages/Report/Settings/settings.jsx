@@ -8,7 +8,6 @@ export default function Settings() {
   return (
     <div className='settings-bar'>
       <Setting />
-      
     </div>
   );
 }

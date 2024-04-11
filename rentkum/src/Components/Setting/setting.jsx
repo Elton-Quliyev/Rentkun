@@ -9,13 +9,8 @@ import { IoLockClosedOutline } from 'react-icons/io5';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { GoShieldCheck } from 'react-icons/go';
 import { TbMessageQuestion } from 'react-icons/tb';
-import ProfileSettings from '../../Pages/Report/Settings/SettingBars/ProfileSettings/profileSettings';
-import PasswordChange from '../../Pages/Report/Settings/SettingBars/PasswordChange/passwordChange';
-import ChangeEmail from '../../Pages/Report/Settings/SettingBars/ChangeEmail/changeEmail';
-import Notifications from '../../Pages/Report/Settings/SettingBars/Notifications/notifications';
-import PaymentMethod from '../../Pages/Report/Settings/SettingBars/PaymentMethod/paymentMethod';
-import Security from '../../Pages/Report/Settings/SettingBars/Security/security';
-import Help from '../../Pages/Report/Settings/SettingBars/Help/help';
+import LittleHeader from '../../Shared/Header/LittleHeader/littleHeader';
+
 
 export default function Setting() {
   const settingItems = [
@@ -59,6 +54,7 @@ export default function Setting() {
   return (
     <div className='rent-set'>
       <div className='settings'>
+        <div className='settings-tittle'>Settings</div>
         <ul className='settings-list'>
           {settingItems.map((item, index) => (
             <div key={index}>
@@ -80,6 +76,7 @@ export default function Setting() {
         
       </div>
           <div>
+            <LittleHeader/>
             <Outlet/>
           </div>
     </div>

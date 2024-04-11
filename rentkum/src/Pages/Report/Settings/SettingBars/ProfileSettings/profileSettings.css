@@ -1,0 +1,67 @@
+.container {
+  padding: 40px;
+}
+.container-title {
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.container-user {
+  margin: 20px 0;
+}
+.container-user_photo {
+  width: 110px;
+  border-radius: 50%;
+}
+.container .profileSettings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .profileSettings_left-right {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.container .profileSettings_left-right__left {
+  width: 49%;
+}
+.container .profileSettings_left-right__right {
+  width: 46.5%;
+  margin-right: 14px;
+}
+.container .profileSettings-btns {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.container .profileSettings-btns_cancel {
+  width: 100px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background: white;
+  color: #000;
+  padding: 11px 21px;
+  font-size: 17px;
+}
+.container .profileSettings-btns_save {
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background: var(--Primary-Blue-01, #1053F3);
+  color: #fff;
+  padding: 11px 21px;
+  font-size: 17px;
+}
+
+.inp {
+  border-radius: 10px;
+  border: 1px solid var(--Grey-02, #DEDEDE);
+  width: 96%;
+  background: none;
+  padding: 15px 12px;
+}
+
+.inp-text {
+  margin-bottom: 10px;
+  font-weight: 600;
+}/*# sourceMappingURL=profileSettings.css.map */

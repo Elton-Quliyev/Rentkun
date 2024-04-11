@@ -1,14 +1,14 @@
 import React from 'react';
 import './header.scss';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/headerPhoto/Logo.png';
+import Logo from '../../../assets/headerPhoto/Logo.png';
 import { RxDashboard,RxCalendar } from "react-icons/rx";
 import { RiCompassDiscoverLine } from "react-icons/ri";
 import { HiSaveAs } from "react-icons/hi";
 import { TbMessage2, TbReport } from "react-icons/tb";
 import { IoReceiptOutline, IoSettingsOutline} from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
-import ShoppingIcon from '../../assets/headerIcons/shopping-cart.svg';
+import ShoppingIcon from '../../../assets/headerIcons/shopping-cart.svg';
 
 export default function Header() {
 
