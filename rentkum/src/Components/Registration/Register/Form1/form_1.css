@@ -1,0 +1,75 @@
+.header-form{
+    display: flex;
+    gap: 30px;
+}
+
+.form-inp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-right_left{
+    display: flex;
+    gap: 10px;
+}
+.form-right_left input{
+    width: 100%;
+}
+#gender{
+    opacity: .75;
+    width: 100%;
+}
+.information{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.gender{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+input{
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.form-location{
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 140px;
+}
+.number{
+    display: flex;
+    gap: 10px;
+}
+.number input{
+    width: 100%;
+}
+select{
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+select:focus{
+    border: 1px solid #1053f3;
+    outline: none;
+    box-shadow: 0 0 5px #1053f3;
+}
+.spn{
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 10px 0;
+    color: black;
+}
+.error-message{
+    color: red;
+}
+
+.birthday{
+opacity: .7;
+}

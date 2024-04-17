@@ -5,7 +5,7 @@
     padding: 30px 25px;
     background-color:#fff ;
     
-    .tittle{
+    &-tittle{
         
         height: 55px;
         display: flex;
@@ -13,6 +13,8 @@
         gap: 12px;
         font-size: 16px;
         margin: 0 0 45px 5px;
+        text-decoration: none;
+        color: black;
 
         &-logo{
             width: 50px ; 
@@ -70,7 +72,7 @@
 
         .shopping{
             background-color: #f5f5f5;
-            width: 298px;
+            width: 265px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -100,15 +102,15 @@
             }
             &-text{
                 text-align: center;
-                font-size: 17px;
+                font-size: 15px;
 
             }
             &-btn{
                 border: none;
                 background-color: #1053f3;
                 color: #fff;
-                width: 274px;
-                height: 50px;
+                width: 240px;
+                height: 35px;
                 padding: 11px 16px 11px 16px;
                 border-radius: 8px;
                 font-size: 17px;

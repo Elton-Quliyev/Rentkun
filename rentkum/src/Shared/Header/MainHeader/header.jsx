@@ -62,13 +62,13 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <div className="tittle">
+      <NavLink to='/' className="header-tittle">
         <img
           src={Logo}
           alt="web site logo"
-          className="tittle-logo" />
-        <h2 className='tittle-name'>Rentkum</h2>
-      </div>
+          className="header-tittle-logo" />
+        <h2 className='header-tittle-name'>Rentkum</h2>
+      </NavLink>
 
       <div className='sidebar'>
 

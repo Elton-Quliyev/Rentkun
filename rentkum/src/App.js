@@ -17,11 +17,16 @@ import Notifications from './Pages/Report/Settings/SettingBars/Notifications/not
 import PaymentMethod from './Pages/Report/Settings/SettingBars/PaymentMethod/paymentMethod';
 import Security from './Pages/Report/Settings/SettingBars/Security/security';
 import Help from './Pages/Report/Settings/SettingBars/Help/help';
+import FormOne from './Components/Registration/Login/Form_1/form_1';
+import FormTwo from './Components/Registration/Register/Form1/form1';
+import ScrollToTop from './Helpers/ScrollToTop/scrollToTop';
 
 function App() {
   return (
     <Router>
       <Header/>
+
+      <ScrollToTop/>
 
       <Routes>
           <Route path='/' element={<Dashboard/>}/>
@@ -43,6 +48,10 @@ function App() {
           </Route>
 
           <Route path='logOut'  element={<LogOut/>}/>
+
+          <Route path='login' element={<FormOne/>}/>
+          <Route path='registration' element={<FormTwo/>}/>
+
         
       </Routes>
     </Router>
