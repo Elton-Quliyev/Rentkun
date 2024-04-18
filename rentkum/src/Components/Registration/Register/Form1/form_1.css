@@ -42,6 +42,11 @@ input{
     font-size: 17px;
     height: 140px;
 }
+.form-location:focus{
+    border: 1px solid #1053f3;
+    outline: none;
+    box-shadow: 0 0 5px #1053f3;
+}
 .number{
     display: flex;
     gap: 10px;

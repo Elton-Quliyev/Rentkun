@@ -1,9 +1,10 @@
 import React from 'react'
+import MediumHeader from '../../../Shared/MediumHeader/mediumHeader'
 
 export default function Calendar() {
   return (
     <div>
-      Calendar
+      <MediumHeader tittle='Calendar'/>
     </div>
   )
 }

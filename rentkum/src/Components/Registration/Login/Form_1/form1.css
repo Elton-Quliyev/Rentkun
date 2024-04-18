@@ -31,10 +31,10 @@ section{
     padding: 10px 0;
 }
 .btn-register.active{
-    border-bottom: 2px solid #1053f3;
+    border-bottom: 2.5px solid #1053f3;
 }
 .btn-login.active{
-    border-bottom: 2px solid #1053f3;
+    border-bottom: 2.5px solid #1053f3;
 }
 .btn-login{
     text-decoration: none;

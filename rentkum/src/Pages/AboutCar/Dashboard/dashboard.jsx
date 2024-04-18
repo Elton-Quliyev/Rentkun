@@ -1,10 +1,10 @@
 import React from 'react'
-import RegisterForm from '../../../Pop-up/popUp'
+import MediumHeader from '../../../Shared/MediumHeader/mediumHeader'
 
 export default function Dashboard() {
   return (
     <div>
-      <RegisterForm/>
+      <MediumHeader tittle='Dashboard'/>
     </div>
   )
 }

@@ -1,14 +1,13 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import MediumHeader from '../../../Shared/MediumHeader/mediumHeader'
 
 export default function Discover() {
   return (
     <div>
-      Discover
+      
 
-      <br /><br /><br /><br /><br /><br /><br /><br />
+      <MediumHeader tittle='Discover'/>
 
-      <NavLink to='/login'>registration</NavLink>
     </div>
   )
 }

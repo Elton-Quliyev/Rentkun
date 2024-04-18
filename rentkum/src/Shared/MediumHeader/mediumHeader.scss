@@ -1,0 +1,76 @@
+.mediumHeader{
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid var(--lGrey-01, #E1E1E1);
+    width: 1090px;
+    padding: 18px 34px;
+    justify-content: space-between;
+
+
+    &-tittle{
+        margin: 0;
+        font-weight: 500;
+    }
+    
+    &-container{
+        display: flex;
+        gap: 15px;
+        
+        &_btns{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &-login{
+                text-decoration: none;
+                background-color: #1053f3;
+                border-radius: 5px;
+                color: #fff;
+                padding: 6px 16px 8px 16px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            &-signin{
+                text-decoration: none;
+                background-color: #fff;
+                border-radius: 5px;
+                color:  #1053f3;
+                padding: 6px 10px 8px 10px;
+                font-size: 18px;
+                font-weight: 500;
+                border: 1px solid #e1dfdf;
+            }
+        }
+
+        &_icons{
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #E1E1E1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_icon{
+                width: 25px;
+                height: 25px;
+            }
+
+        }
+        &_photos{
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &_img{
+                border-radius: 50%;
+                width: 43px;
+                
+            }
+        }
+    }
+}

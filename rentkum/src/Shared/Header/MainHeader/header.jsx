@@ -102,60 +102,6 @@ export default function Header() {
         </ul>
 
 
-          {/* <NavLink className='sidebar-list_item' activeClassName='active' to='/' exact>
-            <img className='sidebar-list_item-icon' src={Dashboard} alt="dashboard" />
-            <span className='sidebar-list_item-name'>Dashboard</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/discover'>
-            <img className='sidebar-list_item-icon' src={Discover} alt="discover" />
-            <span className='sidebar-list_item-name'>Discover</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/calendar'>
-            <img className='sidebar-list_item-icon' src={Calendar} alt="calendar" />
-            <span className='sidebar-list_item-name'>Calendar</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/saved'>
-            <img className='sidebar-list_item-icon' src={Save} alt="save" />
-            <span className='sidebar-list_item-name'>Saved</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/inbox'>
-            <img className='sidebar-list_item-icon' src={Inbox} alt="inbox" />
-            <span className='sidebar-list_item-name'>Inbox</span>
-          </NavLink>
-        </ul>
-
-        <hr className='line' />
-        <h2 className='half-bass'>REPORT</h2>
-
-        <ul className='sidebar-list'>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/transactions'>
-            <img className='sidebar-list_item-icon' src={Transactions} alt="transactions" />
-            <span className='sidebar-list_item-name'>Transactions</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/carReports'>
-            <img className='sidebar-list_item-icon' src={CarReports} alt="carReports" />
-            <span className='sidebar-list_item-name'>Car Reports</span>
-          </NavLink>
-        </ul>
-
-        <div className='shopping'>
-          <div className='shopping-card'>
-            <img className='shopping-card_icon' src={ShoppingIcon} alt="shopping-icon" />
-          </div>
-          <span className='shopping-text'>We connect you with thousands of potential buyers in your area.</span>
-          <button className='shopping-btn'>Sell Your Car</button>
-        </div>
-
-        <ul className='sidebar-list'>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/settings'>
-            <img className='sidebar-list_item-icon' src={Setting} alt="settings" />
-            <span className='sidebar-list_item-name'>Settings</span>
-          </NavLink>
-          <NavLink className='sidebar-list_item' activeClassName='active' to='/logOut'>
-            <img className='sidebar-list_item-icon' src={Logout} alt="logout" />
-            <span className='sidebar-list_item-name'>Log Out</span>
-          </NavLink>
-        </ul> */}
       </div>
     </header>
   )
