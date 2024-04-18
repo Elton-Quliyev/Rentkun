@@ -18,8 +18,9 @@
 .mediumHeader-container_btns {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
-.mediumHeader-container_btns-btn {
+.mediumHeader-container_btns-login {
   text-decoration: none;
   background-color: #1053f3;
   border-radius: 5px;
@@ -27,6 +28,28 @@
   padding: 6px 16px 8px 16px;
   font-size: 18px;
   font-weight: 500;
+}
+.mediumHeader-container_btns-login:hover {
+  color: #fff;
+  background-color: #1053f3;
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+.mediumHeader-container_btns-signin {
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #1053f3;
+  padding: 6px 10px 8px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #e1dfdf;
+}
+.mediumHeader-container_btns-signin:hover {
+  color: #1053f3;
+  background-color: #fff;
+  transition: 0.5s;
+  transform: scale(0.9);
 }
 .mediumHeader-container_icons {
   border-radius: 50%;

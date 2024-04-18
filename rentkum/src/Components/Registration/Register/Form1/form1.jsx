@@ -60,8 +60,8 @@ const FormTwo = () => {
     <section>
       <div className="container-form">
               <div className="header-form"> 
-                <NavLink to='/registration' className="btn-register">Register</NavLink>
                 <NavLink to='/login' className="btn-login">Log in</NavLink>
+                <NavLink to='/registration' className="btn-register">Register</NavLink>
               </div>
         <div className="header-form">
           <h2>Personal information</h2>

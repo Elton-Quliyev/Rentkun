@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./form1.css"
 import Validate from "../../../../Helpers/Validate";
 import { NavLink } from "react-router-dom";
+import { FaFacebookF ,FaTwitter } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 
 function FormOne(){
@@ -53,16 +55,22 @@ function FormOne(){
     }
 
     return(
-        <section>
+        <section className="section">
         <div className="container-form">
             <div className="header-form"> 
-                <NavLink activeClassName="active" to='/registration' className="btn-register">Register</NavLink>
                 <NavLink activeClassName="active" to='/login' className="btn-login">Log in</NavLink>
+                <NavLink activeClassName="active" to='/registration' className="btn-register">Register</NavLink>
             </div>
-            <div className="icons">
-                {/* <img src={} alt="apple" />
-                <img src={} alt="facebook" />
-                <img src={} alt="google" /> */}
+            <div className="form-icons">
+                <div className="form-icons_div">
+                    <FaFacebookF className="form-icons_div-icon"/>
+                </div>
+                <div className="form-icons_div">
+                    <FcGoogle className="form-icons_div-icon"/>
+                </div>
+                <div className="form-icons_div">
+                    <FaTwitter className="form-icons_div-icon"/>
+                </div>
             </div>
             <form onSubmit={handleSubmit}>
 

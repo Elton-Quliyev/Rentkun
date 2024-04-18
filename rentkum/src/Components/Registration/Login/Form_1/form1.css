@@ -1,9 +1,4 @@
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 
 .container-form{
     background-color: white;
@@ -16,7 +11,8 @@ section{
     box-shadow: 0 0 5px rgba(192, 191, 191, 0.7);
 
 
-    margin-left: 300px;
+    margin: 80px 0 0 275px;
+
 }
 
 
@@ -29,6 +25,10 @@ section{
     border: none;
     font-size: 15px;
     padding: 10px 0;
+    width: 70px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
 }
 .btn-register.active{
     border-bottom: 2.5px solid #1053f3;
@@ -42,7 +42,10 @@ section{
     padding: 10px 0;
     background-color: #FFF;
     border: none;
-    font-size: 15px;
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
 }
 .icons{
     display: flex;
@@ -105,3 +108,21 @@ input:focus{
 }
 
 
+.form-icons{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px 10px 0;
+}
+.form-icons_div{
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.form-icons_div-icon{
+    height:  20px;
+}

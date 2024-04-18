@@ -30,6 +30,12 @@
                 font-size: 18px;
                 font-weight: 500;
             }
+            &-login:hover{
+                color:  #fff;
+                background-color: #1053f3;
+                transition: 0.5s;
+                transform: scale(0.9);
+            }
             &-signin{
                 text-decoration: none;
                 background-color: #fff;
@@ -39,6 +45,12 @@
                 font-size: 18px;
                 font-weight: 500;
                 border: 1px solid #e1dfdf;
+            }
+            &-signin:hover{
+                color:  #1053f3;
+                background-color: #fff;
+                transition: 0.5s;
+                transform: scale(0.9);
             }
         }
 

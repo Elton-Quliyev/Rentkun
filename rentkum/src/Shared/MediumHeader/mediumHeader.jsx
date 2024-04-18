@@ -13,7 +13,7 @@ export default function MediumHeader({tittle}) {
         <div className='mediumHeader-container'>
 
             <div className="mediumHeader-container_btns">
-                <NavLink className="mediumHeader-container_btns-signin" to='/login'>Sign up</NavLink>
+                <NavLink className="mediumHeader-container_btns-signin" to='/registration'>Sign up</NavLink>
                 <NavLink className="mediumHeader-container_btns-login" to='/login'>Log in</NavLink>
 
             </div>
