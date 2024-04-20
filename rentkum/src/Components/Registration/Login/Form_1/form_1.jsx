@@ -1,104 +1,128 @@
-import { useState } from "react";
-import "./form1.css"
-import Validate from "../../../../Helpers/Validate";
+import {  useState } from "react";
+import "./form1.css";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF ,FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useDispatch } from "react-redux";
+import { logInUser, logout } from "../../../../Redux/Features/userRegister";
 
 
-function FormOne(){
-
-    const [formData , setFormData] = useState({
-        email : '',
-        password : '',
-        check : ''
-    })
-
-    const [errors , setErrors] = useState({
-        email : '',
-        password : '',
-        check : true
-    })
 
 
-    const handleChange = (e) =>{
+function FormOne() {
 
-        e.preventDefault()
+    const dispatch = useDispatch()
+    
+    
+    
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+        check: false 
+    });
+    
+    const [errors, setErrors] = useState({
+        email: '',
+        password: '',
+        check: true
+    });
+    
+    const handleChange = (e) => {
         const { name, type, checked, value } = e.target;
-    
+        const error = validateInput(name, value); 
+        
         setFormData({
-          ...formData,
-          [name]: type === 'checkbox' ? checked : value
-        })
-    
-
-
-
-        const error = Validate(name , value)
-
+            ...formData,
+            [name]: type === 'checkbox' ? checked : value
+        });
+        
         setErrors({
             ...errors,
-            [name]:error
-        })
-    }
+            [name]: error
+        });
+    };
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        let hasError = false;
+        
+        Object.keys(formData).forEach((key) => {
+            const error = validateInput(key, formData[key]);
+            if (error) {
+                setErrors(prevErrors => ({
+                    ...prevErrors,
+                    [key]: error
+                }));
+                hasError = true;
+            }
+        });
 
+        if (!hasError) {
+            console.log(formData);
+            dispatch(logInUser(formData))
 
-
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-
-        if(formData.email.length >0 && formData.password.length >0){
-                console.log(formData);
-        }else{
-            console.log("formu tam doldurun");
+        } else {
+            console.log("Formu tam doldurun");
         }
+    };
+
+    const logOutHandle = () =>{
+        dispatch(logout)
     }
-
-    return(
-        <section className="section">
-        <div className="container-form">
-            <div className="header-form"> 
-                <NavLink activeClassName="active" to='/login' className="btn-login">Log in</NavLink>
-                <NavLink activeClassName="active" to='/registration' className="btn-register">Register</NavLink>
+    
+    const validateInput = (name, value) => {
+        switch (name) {
+            case 'email':
+                if (!value || !/\S+@\S+\.\S+/.test(value)) {
+                    return 'Geçerli bir e-posta adresi girin';
+                }
+                return '';
+                case 'password':
+                    if (!value || value.length < 8) {
+                        return 'Şifreniz en az 8 karakter olmalıdır';
+                    }
+                    return '';
+                    default:
+                        return '';
+                    }
+                };
+                return (
+                    <section className="section">
+            <div className="container-form">
+                <div className="header-form"> 
+                    <NavLink activeClassName="active" to='/login' className="btn-login">Log in</NavLink>
+                    <NavLink activeClassName="active" to='/registration' className="btn-register">Register</NavLink>
+                </div>
+                <div className="form-icons">
+                    <div className="form-icons_div">
+                        <FaFacebookF className="form-icons_div-icon"/>
+                    </div>
+                    <div className="form-icons_div">
+                        <FcGoogle className="form-icons_div-icon"/>
+                    </div>
+                    <div className="form-icons_div">
+                        <FaTwitter className="form-icons_div-icon"/>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <div className="inpts">
+                        <input type="email" name="email" placeholder="Email adress" onChange={handleChange}/>
+                        {errors.email && <span>{errors.email}</span>}
+                        <input type="password" name="password" placeholder=" Password" onChange={handleChange}/>
+                        {errors.password && <span>{errors.password}</span>}
+                    </div>
+                    <button className="form-btn" type="submit">Create accound</button>
+                    <button onClick={logOutHandle}>logout</button>
+                    <div className="checkbox">
+                        <input type="checkbox" checked={formData.check} name="check" onChange={handleChange}/>
+                        <label htmlFor="checkbox">Send me news and promotions</label>
+                    </div>
+                </form>
+                <span className="end">By continuing I agree with the <a href="#">Terms & Conditions, Privacy Policy</a></span>
             </div>
-            <div className="form-icons">
-                <div className="form-icons_div">
-                    <FaFacebookF className="form-icons_div-icon"/>
-                </div>
-                <div className="form-icons_div">
-                    <FcGoogle className="form-icons_div-icon"/>
-                </div>
-                <div className="form-icons_div">
-                    <FaTwitter className="form-icons_div-icon"/>
-                </div>
-            </div>
-            <form onSubmit={handleSubmit}>
-
-                <div className="inpts">
-
-                    <input type="email" name="email" placeholder="Email adress" onChange={handleChange}/>
-                    {errors.email &&<span>{errors.email} </span>}
-                    <input type="password" name="password" placeholder=" Password" onChange={handleChange}/>
-                    {errors.password &&<span>{errors.password} </span>}
-
-                    
-                </div>
-
-                <button  className="form-btn" type="submit">Create accound</button>
-
-                <div className="checkbox">
-                    <input type="checkbox" defaultChecked={true}  name="check"  onChange={handleChange}/>
-                    <label htmlFor="checkbox">Send me news and promotions</label>
-                </div>
-                
-
-            </form>
-
-            <span className="end" >By continuing I agre with the <a href="#">Therms & Conditions, Privacy Policy</a></span>
-        </div>
         </section>
-    )
+    );
 }
-
 
 export default FormOne;
