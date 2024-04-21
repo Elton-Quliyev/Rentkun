@@ -11,30 +11,27 @@ const FormTwo = () => {
 
 
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
     lastName: "",
-    gender: "",
-    numberPrefix: "+994",
-    phoneNumber: "",
-    date: "",
     email: "",
     password: "",
     confirmPassword: "",
-    zipCode: "",
-    location: ""
+    phoneNumber: "",
+    gender: "",
+    cityAndZipCode: "",
+    location: "",
+    birthDate: "",
   });
 
   const [errors, setErrors] = useState({
-    name: "",
+    firstname: "",
     lastName: "",
-    gender: "",
-    phoneNumber: "",
-    date: "",
     email: "",
-    password: "",
-    confirmPassword: "",
-    zipCode: "",
-    location: ""
+    phoneNumber: "",
+    gender: "",
+    cityAndZipCode: "",
+    location: "",
+    birthDate: "",
   });
 
   const handleChange = (e) => {
@@ -97,7 +94,7 @@ const FormTwo = () => {
           <div className="form-right_left">
             <input
               type="text"
-              name="name"
+              name="firstName"
               placeholder="First name"
               onChange={handleChange}
             />
@@ -135,7 +132,7 @@ const FormTwo = () => {
           <input
             className="birthday"
             type="date"
-            name="date"
+            name="birthDate"
             placeholder="Birthday"
             onChange={handleChange}
           />
@@ -175,7 +172,7 @@ const FormTwo = () => {
             <input
               type="text"
               placeholder="Zip code"
-              name="zipCode"
+              name="cityAndZipCode"
               onChange={handleChange}
             />
             {errors.zipCode && <span className="error-message">{errors.zipCode}</span>}

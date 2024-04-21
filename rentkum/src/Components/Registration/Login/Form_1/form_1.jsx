@@ -18,13 +18,11 @@ function FormOne() {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
-        check: false 
     });
     
     const [errors, setErrors] = useState({
         email: '',
         password: '',
-        check: true
     });
     
     const handleChange = (e) => {
@@ -114,10 +112,7 @@ function FormOne() {
                     </div>
                     <button className="form-btn" type="submit">Create accound</button>
                     <button onClick={logOutHandle}>logout</button>
-                    <div className="checkbox">
-                        <input type="checkbox" checked={formData.check} name="check" onChange={handleChange}/>
-                        <label htmlFor="checkbox">Send me news and promotions</label>
-                    </div>
+                   
                 </form>
                 <span className="end">By continuing I agree with the <a href="#">Terms & Conditions, Privacy Policy</a></span>
             </div>
