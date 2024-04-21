@@ -1,51 +1,80 @@
-const Validate = (name, value) =>{
+const Validate = (name, value, formData) => {
     let error = '';
 
     switch (name) {
         case 'email':
-            let EmailRegex = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm;
-            if(!EmailRegex.test(value)){
-                error='Emailinizi düzgün formatta giriniz'
+            let emailRegex = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/;
+            if (!emailRegex.test(value)) {
+                error = 'Please enter a valid email address';
             }
             break;
 
         case 'password':
-            let PasswordRegex = new RegExp('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$');
-            if(!PasswordRegex.test(value)){
-                error = 'Parolanızı düzgün formatta giriniz (en az 8 karakter, en az bir harf ve bir rakam içermelidir)'
+            if (value.length < 8) {
+                error = 'Password should be at least 8 characters long';
+            }
+            break;
+
+        case 'confirmPassword':
+            if (value !== formData.password) {
+                error = 'Passwords do not match';
             }
             break;
 
         case 'gender':
-            if(value.length < 2){
-                error='Bir cinsiyet seçmelisiniz'
+            const genderRegex = /^(man|woman)$/i;
+            if (!genderRegex.test(value)) {
+                error = 'Please select a gender';
+            }
+            break;
+
+        case 'numberPrefix':
+            const numberPrefixRegex = /^0\d{2}$/;
+            if (!numberPrefixRegex.test(value)) {
+                error = 'Please select a numberPrefix';
             }
             break;
 
         case 'phoneNumber':
-            let PhoneNumberRegex = /^\d{9}$/;
-            if(!PhoneNumberRegex.test(value)){
-                error='Telefon numaranızı düzgün formatta giriniz (9 rakam olmalıdır)'
+            let phoneNumberRegex = /^\d{7}$/;
+            if (!phoneNumberRegex.test(value)) {
+                error = 'Please enter a valid phone number (7 digits)';
             }
             break;
 
-        case 'date':
-            if(value.length < 2){
-                error ='Doğum tarihinizi düzgün formatta giriniz'
+        case 'birthDate':
+            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            if(!dateRegex.test(value)){
+                error = 'Please enter a valid birthday ';
             }
             break;
 
-        case 'name':
-            if(value.length < 3){
-                error = 'Adınızı düzgün formatta giriniz (en az 3 karakter)'
+        case 'firstName':
+        case 'lastName':
+            if (value.length<3) {
+                error = 'Please enter your name';
             }
             break;
-    
+
+        case 'location':
+            const locationRegex = /^[\w\s.,-]+$/;
+            if (!locationRegex.test(value)) {
+                error = 'Please enter a valid location (e.g., City, Country)';
+            }
+            break;
+
+        case 'cityAndZipCode':
+            const cityAndZipCodeRegex = /^[\w\s.,-]+$/;
+            if (!cityAndZipCodeRegex.test(value)) {
+                error = 'Please enter a valid city and zip code';
+            }
+            break;
+
         default:
             break;
     }
 
-    return error
+    return error;
 }
 
 export default Validate;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./form_1.css";
 import { NavLink } from "react-router-dom";
 import Validate from "../../../../Helpers/Validate";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { signUpUser } from "../../../../Redux/Features/userRegister";
 
 const FormTwo = () => {
@@ -16,6 +16,7 @@ const FormTwo = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    numberPrefix: "",
     phoneNumber: "",
     gender: "",
     cityAndZipCode: "",
@@ -27,6 +28,9 @@ const FormTwo = () => {
     firstname: "",
     lastName: "",
     email: "",
+    password: "",
+    confirmPassword: "",
+    numberPrefix: "",
     phoneNumber: "",
     gender: "",
     cityAndZipCode: "",
@@ -39,17 +43,18 @@ const FormTwo = () => {
     const { name, value } = e.target;
 
     setFormData({
-      ...formData,
-      [name]: value
+        ...formData,
+        [name]: value
     });
 
-    const error = Validate(name, value);
+    const error = Validate(name, value, formData); 
 
     setErrors({
-      ...errors,
-      [name]: error
+        ...errors,
+        [name]: error
     });
-  };
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,23 +62,24 @@ const FormTwo = () => {
     let hasError = false;
 
     Object.keys(formData).forEach((key) => {
-      const error = Validate(key, formData[key]);
-      if (error) {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          [key]: error
-        }));
-        hasError = true;
-      }
+        const error = Validate(key, formData[key], formData);
+        if (error) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                [key]: error
+            }));
+            hasError = true;
+        }
     });
 
     if (!hasError) {
-      console.log(formData);
-      dispatch(signUpUser(formData))
+        console.log(formData);
+        dispatch(signUpUser(formData))
     } else {
-      console.log("Please fill out the form correctly");
+        console.log("Please fill out the form correctly");
     }
-  };
+};
+
 
   return (
     <section>
@@ -98,7 +104,7 @@ const FormTwo = () => {
               placeholder="First name"
               onChange={handleChange}
             />
-            {errors.name && <span className="error-message">{errors.name}</span>}
+            {errors.firstName && <span className="error-message">{errors.firstName}</span>}
 
             <input
               type="text"
@@ -115,10 +121,17 @@ const FormTwo = () => {
               onChange={handleChange}
               value={formData.numberPrefix}
             >
-              <option value="+994">+994</option>
-              <option value="+777">+777</option>
-              <option value="+0551">+0551</option>
+              <option value="">0XX</option>
+              <option value="050">050</option>
+              <option value="051">051</option>
+              <option value="099">099</option>
+              <option value="070">070</option>
+              <option value="077">077</option>
+              <option value="010">010</option>
+              <option value="055">055</option>
             </select>
+            {errors.numberPrefix && <span className="error-message">{errors.numberPrefix}</span>}
+
 
             <input
               type="text"
@@ -136,7 +149,7 @@ const FormTwo = () => {
             placeholder="Birthday"
             onChange={handleChange}
           />
-          {errors.date && <span className="error-message">{errors.date}</span>}
+          {errors.birthDate && <span className="error-message">{errors.birthDate}</span>}
 
           <input
             type="text"
@@ -168,6 +181,8 @@ const FormTwo = () => {
               <option value="man">Man</option>
               <option value="woman">Woman</option>
             </select>
+            {errors.gender && <span className="error-message">{errors.gender}</span>}
+
 
             <input
               type="text"
@@ -175,7 +190,7 @@ const FormTwo = () => {
               name="cityAndZipCode"
               onChange={handleChange}
             />
-            {errors.zipCode && <span className="error-message">{errors.zipCode}</span>}
+            {errors.cityAndZipCode && <span className="error-message">{errors.cityAndZipCode}</span>}
           </div>
 
           <textarea
