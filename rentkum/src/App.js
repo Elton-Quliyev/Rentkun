@@ -20,6 +20,7 @@ import Help from './Pages/Report/Settings/SettingBars/Help/help';
 import FormOne from './Components/Registration/Login/Form_1/form_1';
 import FormTwo from './Components/Registration/Register/Form1/form1';
 import ScrollToTop from './Helpers/ScrollToTop/scrollToTop';
+import Vehicle from './Components/Vehicle/vehicle';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
 
           <Route path='login' element={<FormOne/>}/>
           <Route path='registration' element={<FormTwo/>}/>
+          <Route path='vehicle' element={<Vehicle/>}/>
 
         
       </Routes>

@@ -94,12 +94,22 @@
   border: none;
   background-color: #1053f3;
   color: #fff;
-  width: 240px;
-  height: 35px;
+  width: 198px;
+  height: 21px;
   padding: 11px 16px 11px 16px;
   border-radius: 8px;
   font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .sidebar .shopping-btn:hover {
+  background-color: #fff;
+  color: #1053f3;
+  border: 2px solid #1053f3;
 }
 
 .hidden {

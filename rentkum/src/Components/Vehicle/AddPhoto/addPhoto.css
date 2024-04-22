@@ -1,0 +1,41 @@
+.vehicle-form_photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  border: 2px dashed #ccc;
+  border-radius: 1px;
+  gap: 20px;
+}
+.vehicle-form_photos-image {
+  width: 180px;
+}
+.vehicle-form_photos-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.8;
+}
+.vehicle-form_photos-line_hr {
+  width: 70px;
+  background-color: rgb(255, 255, 255);
+  height: 0px;
+  border-radius: 50%;
+}
+.vehicle-form_photos-btn {
+  width: 150px;
+  height: 47px;
+  border: none;
+  color: #fff;
+  background-color: #1053f3;
+  padding: 15px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.vehicle-form_photos-text {
+  opacity: 0.6;
+  font-size: 13px;
+}/*# sourceMappingURL=addPhoto.css.map */

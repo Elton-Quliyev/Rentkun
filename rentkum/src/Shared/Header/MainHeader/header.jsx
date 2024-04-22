@@ -94,7 +94,7 @@ export default function Header() {
                     <img className='shopping-card_icon' src={ShoppingIcon} alt="shopping-icon" />
                   </div>
                     <span className='shopping-text'>We connect you with thousands of potential buyers in your area.</span>
-                    <button className='shopping-btn'>Sell Your Car</button>
+                    <NavLink to='/vehicle' className='shopping-btn'>Sell Your Car</NavLink>
                 </div>
               )}
             </div>

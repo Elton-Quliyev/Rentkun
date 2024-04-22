@@ -1,0 +1,45 @@
+.vehicle-form_photos{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    border: 2px dashed #ccc;
+    border-radius: 1px;
+    gap: 20px;
+
+    &-image{
+        width: 180px;
+    }
+    &-line{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        opacity: .8;
+
+        &_hr{
+            width: 70px;
+            background-color: rgb(255, 255, 255);
+            height: 0px;
+            border-radius: 50%;
+        }
+    }
+    &-btn{
+        width: 150px;
+        height: 47px;
+        border: none;
+        color: #fff;
+        background-color: #1053f3;
+        padding: 15px 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+
+    }
+    &-text{
+        opacity: .6;
+        font-size: 13px;
+    }
+}
