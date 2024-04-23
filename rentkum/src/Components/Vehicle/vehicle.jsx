@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './vehicle.scss';
 import addPhoto from '../../assets/headerPhoto/addPhoto.png';
+import { FaAngleDoubleLeft } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
+
 
 export default function Vehicle() {
   const [formData, setFormData] = useState({
@@ -25,7 +28,6 @@ export default function Vehicle() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Burada form verilerini backend'e gönderebilirsiniz
   };
 
   return (
@@ -34,6 +36,10 @@ export default function Vehicle() {
         <div className="vehicle-header">
           <h1 className='vehicle-header_title'>Create a New Car Listing</h1>
           <span className='vehicle-header_text'>Provide basic information about your car</span>
+
+          <NavLink className='vehicle-header_out' to='/'>
+            <FaAngleDoubleLeft className="btn-out"/>
+          </NavLink>
         </div>
 
         <form className='vehicle-form' onSubmit={handleSubmit}>

@@ -12,6 +12,7 @@ import ShoppingIcon from '../../../assets/headerIcons/shopping-cart.svg';
 
 export default function Header() {
 
+
   const menuItem = [
     {
       name:"Dashboard",

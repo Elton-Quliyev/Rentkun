@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Validate from "../../../../Helpers/Validate";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../../../../Redux/Features/userRegister";
+import { FaAngleDoubleLeft } from "react-icons/fa";
 
 const FormTwo = () => {
 
@@ -82,15 +83,22 @@ const FormTwo = () => {
 
 
   return (
-    <section>
+    <section className="section-form">
       <div className="container-form">
         <div className="header-form">
-          <NavLink to="/login" className="btn-login">
-            Log in
+          <div className="header-form_btns">
+            <NavLink to="/login" className="btn-login">
+              Log in
+            </NavLink>
+            <NavLink to="/registration" className="btn-register">
+              Register
+            </NavLink>
+          </div>
+
+          <NavLink to='/'>
+            <FaAngleDoubleLeft className="btn-out"/>
           </NavLink>
-          <NavLink to="/registration" className="btn-register">
-            Register
-          </NavLink>
+
         </div>
         <div className="header-form">
           <h2>Personal information</h2>

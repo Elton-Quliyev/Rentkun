@@ -1,5 +1,6 @@
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes , Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './Shared/Header/MainHeader/header';
 import Discover from './Pages/AboutCar/Discover/discover';
 import Dashboard from './Pages/AboutCar/Dashboard/dashboard';
@@ -25,39 +26,49 @@ import Vehicle from './Components/Vehicle/vehicle';
 function App() {
   return (
     <Router>
-      <Header/>
-
-      <ScrollToTop/>
-
-      <Routes>
-          <Route path='/' element={<Dashboard/>}/>
-          <Route path='discover' element={<Discover/>}/>
-          <Route path='calendar' element={<Calendar/>}/>
-          <Route path='saved' element={<Saved/>}/>
-          <Route path='inbox' element={<Inbox/>}/>
-          <Route path='transactions' element={<Transactions/>}/>
-          <Route path='carReports' element={<CarReports/>}/>
-          <Route path='settings' element={<Settings/>}>
-            <Route index element={<Navigate to="profile" replace />} />
-            <Route path='profile'  element={<ProfileSettings />} />
-            <Route path='passwordChange' element={<PasswordChange />} />
-            <Route path='emailChange' element={<ChangeEmail />} />
-            <Route path='notifications' element={<Notifications />} />
-            <Route path='payment' element={<PaymentMethod />} />
-            <Route path='security' element={<Security />} />
-            <Route path='help' element={<Help />} />
-          </Route>
-
-          <Route path='logOut'  element={<LogOut/>}/>
-
-          <Route path='login' element={<FormOne/>}/>
-          <Route path='registration' element={<FormTwo/>}/>
-          <Route path='vehicle' element={<Vehicle/>}/>
-
-        
-      </Routes>
+      <AppRoutes />
     </Router>
   );
 }
+
+function AppRoutes() {
+  const location = useLocation();
+
+  const shouldRenderHeader = !["/login", "/registration", "/vehicle"].includes(location.pathname);
+
+  return (
+    <div className='app-container'>
+      {shouldRenderHeader && <Header />}
+
+      <ScrollToTop />
+
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="discover" element={<Discover />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="saved" element={<Saved />} />
+        <Route path="inbox" element={<Inbox />} />
+        <Route path="transactions" element={<Transactions />} />
+        <Route path="carReports" element={<CarReports />} />
+        <Route path="settings" element={<Settings />}>
+          <Route index element={<Navigate to="profile" replace />} />
+          <Route path="profile" element={<ProfileSettings />} />
+          <Route path="passwordChange" element={<PasswordChange />} />
+          <Route path="emailChange" element={<ChangeEmail />} />
+          <Route path="notifications" element={<Notifications />} />
+          <Route path="payment" element={<PaymentMethod />} />
+          <Route path="security" element={<Security />} />
+          <Route path="help" element={<Help />} />
+        </Route>
+        <Route path="logOut" element={<LogOut />} />
+        <Route path="login" element={<FormOne />} />
+        <Route path="registration" element={<FormTwo />} />
+        <Route path="vehicle" element={<Vehicle />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </div>
+  );
+}
+
 
 export default App;

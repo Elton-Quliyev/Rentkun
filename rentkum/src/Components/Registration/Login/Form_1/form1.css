@@ -1,4 +1,9 @@
-
+.section-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .container-form{
     background-color: white;
@@ -11,7 +16,7 @@
     box-shadow: 0 0 5px rgba(192, 191, 191, 0.7);
 
 
-    margin: 80px 0 0 275px;
+    margin-top: 80px;
 
 }
 

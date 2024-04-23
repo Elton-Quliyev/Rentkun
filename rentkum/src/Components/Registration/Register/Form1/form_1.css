@@ -1,6 +1,20 @@
 .header-form{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-form_btns{
+    display: flex;
     gap: 20px;
+}
+.btn-out{
+    width: 25px;
+    height: 25px;
+    color: #000;
+}
+
+.btn-out:hover{
+    color: #1053f3;
 }
 
 .form-inp{

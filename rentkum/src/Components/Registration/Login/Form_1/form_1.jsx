@@ -5,6 +5,7 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useDispatch } from "react-redux";
 import { logInUser, logout } from "../../../../Redux/Features/userRegister";
+import { FaAngleDoubleLeft } from "react-icons/fa";
 
 
 
@@ -86,12 +87,23 @@ function FormOne() {
                     }
                 };
                 return (
-                    <section className="section">
+                    <section className="section-form">
             <div className="container-form">
-                <div className="header-form"> 
-                    <NavLink activeClassName="active" to='/login' className="btn-login">Log in</NavLink>
-                    <NavLink activeClassName="active" to='/registration' className="btn-register">Register</NavLink>
-                </div>
+            <div className="header-form">
+          <div className="header-form_btns">
+            <NavLink to="/login" className="btn-login">
+              Log in
+            </NavLink>
+            <NavLink to="/registration" className="btn-register">
+              Register
+            </NavLink>
+          </div>
+
+          <NavLink to='/'>
+            <FaAngleDoubleLeft className="btn-out"/>
+          </NavLink>
+
+        </div>
                 <div className="form-icons">
                     <div className="form-icons_div">
                         <FaFacebookF className="form-icons_div-icon"/>
