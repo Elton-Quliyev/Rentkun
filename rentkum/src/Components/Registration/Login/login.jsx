@@ -1,16 +1,16 @@
 import {  useState } from "react";
-import "./form1.css";
+import "./login.css";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useDispatch } from "react-redux";
-import { logInUser, logout } from "../../../../Redux/Features/userRegister";
+import { logInUser, logout } from "../../../Redux/Features/userRegister";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 
 
 
 
-function FormOne() {
+function LoginForm() {
 
     const dispatch = useDispatch()
     
@@ -132,4 +132,4 @@ function FormOne() {
     );
 }
 
-export default FormOne;
+export default LoginForm;

@@ -18,10 +18,10 @@ import Notifications from './Pages/Report/Settings/SettingBars/Notifications/not
 import PaymentMethod from './Pages/Report/Settings/SettingBars/PaymentMethod/paymentMethod';
 import Security from './Pages/Report/Settings/SettingBars/Security/security';
 import Help from './Pages/Report/Settings/SettingBars/Help/help';
-import FormOne from './Components/Registration/Login/Form_1/form_1';
-import FormTwo from './Components/Registration/Register/Form1/form1';
 import ScrollToTop from './Helpers/ScrollToTop/scrollToTop';
 import Vehicle from './Components/Vehicle/vehicle';
+import LoginForm from './Components/Registration/Login/login';
+import SignUpForm from './Components/Registration/SignUp/signUp';
 
 function App() {
   return (
@@ -61,8 +61,8 @@ function AppRoutes() {
           <Route path="help" element={<Help />} />
         </Route>
         <Route path="logOut" element={<LogOut />} />
-        <Route path="login" element={<FormOne />} />
-        <Route path="registration" element={<FormTwo />} />
+        <Route path="login" element={<LoginForm />} />
+        <Route path="registration" element={<SignUpForm />} />
         <Route path="vehicle" element={<Vehicle />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

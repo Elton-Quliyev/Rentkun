@@ -1,12 +1,12 @@
 import { useState } from "react";
-import "./form_1.css";
+import "./signUp.css";
 import { NavLink } from "react-router-dom";
-import Validate from "../../../../Helpers/Validate";
+import Validate from "../../../Helpers/Validate";
 import { useDispatch } from "react-redux";
-import { signUpUser } from "../../../../Redux/Features/userRegister";
+import { signUpUser } from "../../../Redux/Features/userRegister";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 
-const FormTwo = () => {
+const SignUpForm = () => {
 
   const dispatch = useDispatch()
 
@@ -224,4 +224,4 @@ const FormTwo = () => {
   );
 };
 
-export default FormTwo;
+export default SignUpForm;
