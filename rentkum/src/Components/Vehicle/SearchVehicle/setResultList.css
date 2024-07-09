@@ -1,0 +1,30 @@
+
+.results-list {
+    width: 96%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 8px #ddd;
+    border-radius: 6px;
+    margin-top: 1rem;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    cursor: pointer;
+  }
+  
+  .results-list > div {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .results-list > div:last-child {
+    border-bottom: none;
+  }
+  
+  .results-list_item:hover{
+    background-color: #ccc;
+    border-radius: 4px;
+  }
